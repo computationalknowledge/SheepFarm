@@ -1,15 +1,17 @@
-import java.util.ArrayList;
+public class SheepManager {
 
-
-public class ListOfSheep {
-
-	private ArrayList<Sheep> arrayList = new ArrayList<>();
+	public static void main(String[] args) {
+		run();
+		System.out.println("finished");
+	}
 	
-	public int AddSheep(Sheep sheepToAdd) {
-		// return number of sheep in the Database
-		int numberOfSheep = 0;
-		(this.arrayList).add(sheepToAdd);
-		System.out.println("Added a sheep " + sheepToAdd.SheepName);
-		return numberOfSheep;
+	static void run(){
+		ListOfSheep SheepList = new ListOfSheep();
+		TestHarness.GenerateSheep();
+		ListOfSheep.ListTheSheep();
+	}
+
+	static int countTheSheep() {
+		return (ListOfSheep.SheepRoster).size();
 	}
 }
